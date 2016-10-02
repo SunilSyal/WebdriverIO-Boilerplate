@@ -1,7 +1,7 @@
 {
-    "name": "webdriversample",
+    "name": "WebdriverIO-Boilerplate",
     "version": "1.0.0",
-    "url": "https://github.com/SunilSyal/WebdriverIO-Tutorials",
+    "url": "https://github.com/SunilSyal/WebdriverIO-Boilerplate",
     "author": "Sunil Syal - sunil.syal@gmail.com",
     "license": "MIT",
     "keywords": [
