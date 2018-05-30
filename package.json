@@ -1,30 +1,33 @@
 {
-    "name": "WebdriverIO-Boilerplate",
-    "version": "1.0.0",
-    "url": "https://github.com/SunilSyal/WebdriverIO-Boilerplate",
-    "author": "Sunil Syal - sunil.syal@gmail.com",
-    "license": "MIT",
-    "keywords": [
-        "webdriverio",
-        "testing",
-        "mock",
-        "browser",
-        "selenium"
-    ],
-    "dependencies": {},
-    "devDependencies": {
-        "chai": "^3.5.0",
-        "npm-run-all": "^3.1.0",
-        "selenium-standalone": "^5.7.2",
-        "wd-selenium-hooks": "^0.1.0",
-        "wdio-mocha-framework": "^0.4.3",
-        "wdio-selenium-standalone-service": "0.0.7",
-        "wdio-spec-reporter": "0.0.3",
-        "webdriverio": "^4.2.16"
-    },
-    "scripts": {
-        "setup": "selenium-standalone install",
-        "start": "npm-run-all test",
-        "test": "./node_modules/.bin/wdio webdriver.config.js"
-    }
+  "name": "WebdriverIO-Boilerplate",
+  "version": "1.0.0",
+  "url": "https://github.com/SunilSyal/WebdriverIO-Boilerplate",
+  "author": "Sunil Syal - sunil.syal@gmail.com",
+  "license": "MIT",
+  "keywords": [
+    "webdriverio",
+    "testing",
+    "mock",
+    "browser",
+    "selenium"
+  ],
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "npm-run-all": "^3.1.0",
+    "selenium-standalone": "^6.13.0",
+    "wd-selenium-hooks": "^0.1.0",
+    "wdio-allure-reporter": "^0.1.2",
+    "wdio-junit-reporter": "^0.3.1",
+    "wdio-mocha-framework": "^0.5.13",
+    "wdio-sauce-service": "^0.4.8",
+    "wdio-selenium-standalone-service": "0.0.10",
+    "wdio-spec-reporter": "0.0.3",
+    "webdriverio": "^4.12.0"
+  },
+  "scripts": {
+    "setup": "selenium-standalone install --drivers.chrome.version=2.38",
+    "test": "./node_modules/.bin/wdio webdriver.config.js",
+    "test-large": "npm run test -- -b large -p pageOne"
+  }
 }
