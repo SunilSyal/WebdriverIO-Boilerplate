@@ -21,3 +21,34 @@ describe('Sparks Sign In Journey', function() {
     });
 
 });
+
+describe.skip('M&S Exercise', function() {
+
+    before(function() {
+        browser.url('http://www.marksandspencer.com/c/women/');
+    })
+
+
+    it('should pass sample test', function() {
+        expect(browser.getTitle()).to.contain('Womenswear');  
+        browser.scroll('.spotlight-carousel');
+
+        expect(browser.element('.spotlight-carousel').getText()).to.contain('Love It For Less');
+        browser.scroll('footer');
+
+        let email = 'abc@abc.com';
+        browser.setValue('.email-input', email);
+
+        browser.click('button[name="email-newsletter"]');
+        expect(browser.getTitle()).to.contain('News Letter');
+
+        browser.waitForExist('iframe[id="M173"]');
+
+        let my_frame = $('iframe[id="M173"]').value;
+        browser.frame(my_frame);
+
+        browser.waitForExist('#mns-email');
+        expect(browser.element('#mns-email').getValue()).to.contain(email);
+    });
+
+});
