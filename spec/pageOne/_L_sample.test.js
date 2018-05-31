@@ -2,7 +2,7 @@ var sampleFunctions = require("../../common/sampleFunctions");
 var homePageLocators =require("../../resources/homePageLocators");
 var plpPageLocators = require("../../resources/plpPageLocators");
 
-describe.skip('Sparks Sign In Journey', function() {
+describe('Sparks Sign In Journey', function() {
 
     before(function() {
         browser.url(domainName + '/');
@@ -22,7 +22,7 @@ describe.skip('Sparks Sign In Journey', function() {
 
 });
 
-describe('M&S Exercise', function() {
+describe.skip('M&S Exercise', function() {
 
     before(function() {
         browser.url('http://www.marksandspencer.com/c/women/');
