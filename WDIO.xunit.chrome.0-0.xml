@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="sparks_sign_in_journey" timestamp="2018-05-31T16:08:23" time="0.001" tests="2" failures="0" errors="0" skipped="2">
+    <properties>
+      <property name="specId" value="10ccbe318da0aad7cba30724d975d469"/>
+      <property name="suiteName" value="Sparks Sign In Journey"/>
+      <property name="capabilities" value="chrome"/>
+      <property name="file" value="./spec/pageOne/_L_sample.test.js"/>
+    </properties>
+    <testcase classname="chrome.sparks_sign_in_journey" name="should_have_the_correct_title" time="0.001">
+      <skipped/>
+    </testcase>
+    <testcase classname="chrome.sparks_sign_in_journey" name="should_accept_the_email_and_move_to_contact_us_page" time="0">
+      <skipped/>
+    </testcase>
+  </testsuite>
+  <testsuite name="m_s_exercise" timestamp="2018-05-31T16:08:23" time="15.4" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="10ccbe318da0aad7cba30724d975d469"/>
+      <property name="suiteName" value="M&amp;S Exercise"/>
+      <property name="capabilities" value="chrome"/>
+      <property name="file" value="./spec/pageOne/_L_sample.test.js"/>
+    </properties>
+    <testcase classname="chrome.m_s_exercise" name="should_pass_sample_test" time="10.382">
+      <system-out>
+        <![CDATA[
+COMMAND: GET http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/title - {}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":"Womenswear | Clothing, Shoes & Accessories For Women | M&S"}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element - {"using":"css selector","value":".spotlight-carousel"}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":{"ELEMENT":"0.5156352988505877-1"}}
+COMMAND: GET http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element/0.5156352988505877-1/location - {}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":{"ceil":{},"clone":{},"floor":{},"round":{},"scale":{},"toString":{},"translate":{},"x":374.390625,"y":657.578125}}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/execute - {"script":"return (function scroll(x, y) {\n    return window.scrollTo(x, y);\n}).apply(null, arguments)","args":[374.390625,657.578125]}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":null}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element - {"using":"css selector","value":".spotlight-carousel"}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":{"ELEMENT":"0.5156352988505877-1"}}
+COMMAND: GET http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element/0.5156352988505877-1/text - {}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":"Love It For Less\nShop all Tops & T-shirts\nPure Cotton Rib Crew Neck T-Shirt\n£4.50\nPure Cotton Rib Crew Neck T-Shirt\n£4.50\nPure Cotton Rib Crew Neck T-Shirt\n£4.50\nPure Cotton Rib Crew Neck T-Shirt\n£4.50\nPure Cotton Rib Crew Neck T-Shirt\nNext"}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element - {"using":"css selector","value":"footer"}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":{"ELEMENT":"0.5156352988505877-2"}}
+COMMAND: GET http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element/0.5156352988505877-2/location - {}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":{"ceil":{},"clone":{},"floor":{},"round":{},"scale":{},"toString":{},"translate":{},"x":0,"y":3701.375}}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/execute - {"script":"return (function scroll(x, y) {\n    return window.scrollTo(x, y);\n}).apply(null, arguments)","args":[0,3701.375]}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":null}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/elements - {"using":"css selector","value":".email-input"}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":[{"ELEMENT":"0.5156352988505877-3"}]}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element/0.5156352988505877-3/clear - {}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":null}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element/0.5156352988505877-3/value - {"value":["a","b","c","@","a","b","c",".","c","o","(1 more items)"],"text":"abc@abc.com"}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":null}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element - {"using":"css selector","value":"button[name=\"email-newsletter\"]"}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":{"ELEMENT":"0.5156352988505877-4"}}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element/0.5156352988505877-4/click - {}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":null}
+COMMAND: GET http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/title - {}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":"News Letter"}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/elements - {"using":"css selector","value":"iframe[id=\"M173\"]"}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":[{"ELEMENT":"0.04570682927138803-1"}]}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element - {"using":"css selector","value":"iframe[id=\"M173\"]"}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":{"ELEMENT":"0.04570682927138803-1"}}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/frame - {"id":{"ELEMENT":"0.04570682927138803-1","element-6066-11e4-a52e-4f735466cecf":"0.04570682927138803-1"}}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":null}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/elements - {"using":"id","value":"mns-email"}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":[{"ELEMENT":"0.7383114889190294-1"}]}
+COMMAND: POST http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element - {"using":"id","value":"mns-email"}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":{"ELEMENT":"0.7383114889190294-1"}}
+COMMAND: GET http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element/0.7383114889190294-1/property/value - {}
+RESULT: {"message":"unknown command: session/994c89855867b56e5b39436c4cd2cf0f/element/0.7383114889190294-1/property/value","type":"RuntimeError"}
+COMMAND: GET http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f/element/0.7383114889190294-1/attribute/value - {}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":"abc@abc.com"}
+COMMAND: DELETE http://localhost:4444/wd/hub/session/994c89855867b56e5b39436c4cd2cf0f - {}
+RESULT: {"sessionId":"994c89855867b56e5b39436c4cd2cf0f","status":0,"value":null}
+]]>
+      </system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

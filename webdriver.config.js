@@ -63,9 +63,10 @@ exports.config = {
 
     specs: specArr,
 
-    services: ['selenium-standalone', 'sauce'],
+    //services: ['selenium-standalone', 'sauce'],
+    services: ['selenium-standalone'],
 
-    sauceConnect: true,
+    sauceConnect: false,
 
     maxInstances: 10,
 
