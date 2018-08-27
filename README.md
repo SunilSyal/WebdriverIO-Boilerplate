@@ -3,10 +3,15 @@ WebdriverIO test framework
 
 
 # Commands to run test cases
-npm run test -- -p [ PageName ] -b large    - For large web
 
-npm run test -- -p [ PageName ] -b medium   - For medium web
+## For large web
+npm run test -- -p [ PageName ] -b large
 
-npm run test -- -p [ PageName ] -b small    - For small device
+## For medium web
+npm run test -- -p [ PageName ] -b medium
 
-npm run test -- -p [ PageName ] -b xsmall   - For xsmall device
+## For small web
+npm run test -- -p [ PageName ] -b small
+
+## For xsmall web
+npm run test -- -p [ PageName ] -b xsmall
