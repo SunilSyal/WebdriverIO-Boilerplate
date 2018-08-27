@@ -2,53 +2,58 @@ var sampleFunctions = require("../../common/sampleFunctions");
 var homePageLocators =require("../../resources/homePageLocators");
 var plpPageLocators = require("../../resources/plpPageLocators");
 
-describe('Sparks Sign In Journey', function() {
+describe('Sample Journey', function() {
 
     before(function() {
         browser.url(domainName + '/');
     })
 
-
     it('should have the correct title', function() {
-        this.timeout(0);
         expect(browser.getTitle()).to.contain('John Lewis');
 
     });
 
-    it('should accept the email and move to contact us page', function() {
-        this.timeout(0);
+    it('should run search - demo for reusable code', function() {
         sampleFunctions.globalSearch("dress");
     });
 
 });
 
-describe.skip('M&S Exercise', function() {
+describe('Long test case ', function() {
 
     before(function() {
-        browser.url('http://www.marksandspencer.com/c/women/');
+        browser.url(domainName + '/');
     })
 
-
     it('should pass sample test', function() {
-        expect(browser.getTitle()).to.contain('Womenswear');  
-        browser.scroll('.spotlight-carousel');
+        let searchItem = 'dress';
 
-        expect(browser.element('.spotlight-carousel').getText()).to.contain('Love It For Less');
-        browser.scroll('footer');
+        // Reusing search scenario 
+        sampleFunctions.globalSearch(searchItem);
+        expect(browser.getTitle()).to.contain(searchItem); 
 
-        let email = 'abc@abc.com';
-        browser.setValue('.email-input', email);
+        expect(browser.getTitle()).to.contain(searchItem); 
+        let result = browser.element(plpPageLocators.searchHeading).getText();
+        expect(result).to.contain(searchItem);
 
-        browser.click('button[name="email-newsletter"]');
-        expect(browser.getTitle()).to.contain('News Letter');
+        // Hover over the first product image and then to the quick look button
+        browser.moveToObject(plpPageLocators.productImage);
+        browser.moveToObject(plpPageLocators.quickView);
+        browser.click(plpPageLocators.quickView);
 
-        browser.waitForExist('iframe[id="M173"]');
+        // We can drop this - this is optional for demo purpose
+        browser.waitForVisible(plpPageLocators.quickViewContainer);
+        
+        // This is important as the popup contnet is loading async 
+        browser.waitForVisible(plpPageLocators.addToBasketCTA);
+        browser.moveToObject(plpPageLocators.addToBasketCTA);
 
-        let my_frame = $('iframe[id="M173"]').value;
-        browser.frame(my_frame);
+        // Button title before a size is selected
+        expect(plpPageLocators.addToBasketCTABtnElement.getText()).to.contain('Choose a size first');
 
-        browser.waitForExist('#mns-email');
-        expect(browser.element('#mns-email').getValue()).to.contain(email);
+        browser.click(plpPageLocators.sizeLink);
+        // Button title after a size is selected
+        expect(plpPageLocators.addToBasketCTABtnElement.getText()).to.contain('Add to basket');
     });
 
 });
