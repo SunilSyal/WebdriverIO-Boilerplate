@@ -19,7 +19,7 @@ describe('Sample Journey', function() {
 
 });
 
-describe.only('Long test case ', function() {
+describe('Long test case ', function() {
 
     before(function() {
         browser.url(domainName + '/');
