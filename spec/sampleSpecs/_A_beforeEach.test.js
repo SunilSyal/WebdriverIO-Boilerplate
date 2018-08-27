@@ -1,6 +1,6 @@
 var clpPageLocators = require("../../resources/clpPageLocators");
 
-describe.skip('Testing - Before Each in describe section', function() {
+describe('Testing - before each', function() {
 
     it('Should have a title', function() {
         expect(browser.getTitle()).to.contain("Women's Clothes & Fashion");

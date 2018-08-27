@@ -1,6 +1,6 @@
 var clpPageLocators = require("../../resources/clpPageLocators");
 
-describe('Testing - Using before', function() {
+describe('Testing - before', function() {
 
     it('Should have a title', function() {
         expect(browser.getTitle()).to.contain("Women's Clothes & Fashion");
