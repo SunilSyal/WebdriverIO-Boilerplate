@@ -1,5 +1,5 @@
 module.exports = {
-    footer: 'footer',
-    searchInput: '#desktopSearch',
-    searchSubmit: '#desktopSearch + button'
+  footer: "footer",
+  searchInput: "#desktopSearch",
+  searchSubmit: "#desktopSearch + button"
 };
